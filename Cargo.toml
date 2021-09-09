@@ -1,0 +1,19 @@
+[package]
+edition = "2018"
+name = "scancode-rs"
+version = "0.1.0"
+description = "Crate for interacting with ScanCode data."
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+git2 = "0.13"
+serde = {version = "1", features = ["derive"]}
+serde_yaml = "0.8"
+tempfile = "3"
+thiserror = "1"
+
+[dev-dependencies]
+pretty_assertions = "0.7"
+yaml-rust = "0.4"
