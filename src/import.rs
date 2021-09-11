@@ -10,6 +10,10 @@ use crate::models::ScancodeError;
 use crate::models::ScancodeLicense;
 
 /// Get all licenses from the [ScanCode license database](https://github.com/nexB/scancode-licensedb).
+///
+/// # Errors
+///
+/// Returns Error if something in cloning the repository fails.
 pub fn from_scancode_database() -> Result<Vec<ScancodeLicense>> {
     let licenses = from_git_database("https://github.com/nexB/scancode-licensedb.git", "docs")?;
 
@@ -18,6 +22,10 @@ pub fn from_scancode_database() -> Result<Vec<ScancodeLicense>> {
 
 /// Get all licenses from a given license database. Specify the url to the repository and the
 /// path where the license files are located, relative to the root of the repository.
+///
+/// # Errors
+///
+/// Returns Error if something in cloning the repository fails.
 pub fn from_git_database<P: AsRef<Path>>(
     url: &str,
     path_in_repo: P,

@@ -3,7 +3,10 @@ edition = "2018"
 name = "scancode-rs"
 version = "0.1.0"
 description = "Crate for interacting with ScanCode data."
+repository = "https://github.com/mmurto/scancode-rs"
 license = "MIT"
+categories = ["development-tools"]
+keywords = ["licensing"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
